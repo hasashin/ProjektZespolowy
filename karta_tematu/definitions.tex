@@ -9,6 +9,7 @@
 \newread\file
 \openin\file=#1
 \ifeof\file
+\errmessage{There is no file #1}
 \else
 \def\inputtext{}
 \loop\unless\ifeof\file
