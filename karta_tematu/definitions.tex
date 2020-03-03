@@ -1,0 +1,38 @@
+\def\grupa#1{\gdef\@grupa{#1}}
+\def\@grupa{\@latex@warning@no@line{No \noexpand\grupa given}}
+
+\setlength{\tabcolsep}{8pt}
+\renewcommand{\arraystretch}{1.5}
+\renewcommand{\dateseparator}{.}
+
+\newcommand{\readFileContents}[1]{
+\newread\file
+\openin\file=#1
+\ifeof\file
+\else
+\def\inputtext{}
+\loop\unless\ifeof\file
+    \read\file to\line
+    \edef\inputtext{\inputtext\line}
+\repeat
+\closein\file
+\fi
+}
+
+
+\newcommand{\inputProblem}[1]{
+    \setsepchar{;/,/&}
+    \readFileContents{#1}
+    \readlist\data{\inputtext}
+    %\data[2,1,2]
+    \input{tabele/problem.tex}
+}
+
+\newcommand{\putrow}[2]{
+    \data[#1,#2,1] & \data[#1,#2,2]  \\ \hline
+}
+\newcommand{\getelem}[3]{
+    \data[#1,#2,#3]
+}
+
+\newcounter{ct}
