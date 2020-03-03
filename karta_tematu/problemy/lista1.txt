@@ -1,0 +1,9 @@
+1,
+Wybór najlepszego algorytmu kategoryzacji tekstu.,
+Sprawdzone algorytmy kategoryzujące.;
+1 & test1,
+2 & test2,
+3 & test2,
+4 & test2;
+Przetestowane hipotezy;
+1 & ;
