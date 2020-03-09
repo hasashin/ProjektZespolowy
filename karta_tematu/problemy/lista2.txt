@@ -1,9 +1,6 @@
 2,
 Wybór najskuteczniejszego lematyzatora języka polskiego.,
 Sprawdzone lematyzatory.;
-1 & test1,
-2 & test2,
-3 & test2,
-4 & test2;
+1 & ;
 Przetestowane hipotezy;
-1 & tests;
+1 & ;
